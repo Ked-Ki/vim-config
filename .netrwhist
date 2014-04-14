@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/kevin/.config/mopidy'
+let g:netrw_dirhist_2='/home/kevin/Desktop'
+let g:netrw_dirhist_3='/home/kevin/output_process'
+let g:netrw_dirhist_4='/home/kevin/.ncmpcpp'
+let g:netrw_dirhist_5='/home/kevin/.ssh'
+let g:netrw_dirhist_6='/home/kevin/Networks/cmsc23300'
+let g:netrw_dirhist_7='/home/kevin/Networks/Project_1/chirc/src'
+let g:netrw_dirhist_8='/usr/local/src/dwm'
+let g:netrw_dirhist_9='/home/kevin/.conky'
