@@ -1,7 +1,7 @@
 set nocompatible
 
 syntax on  "syntax highlighting
-set relativenumber  "Enables line numbering
+"set relativenumber  "Enables line numbering
 
 set wrap
 set textwidth=80
