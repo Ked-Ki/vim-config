@@ -23,11 +23,9 @@ set lazyredraw "don't redraw during macros
 " normal backspace
 set backspace=indent,eol,start
 
-" normal arrow keys
-imap <silent> <Down> <C-o>gj
-imap <silent> <Up> <C-o>gk
-nmap <silent> <Down> gj
-nmap <silent> <Up> gk
+" fuck normal arrow keys
+nnoremap <silent> <Right> :bnext<CR>
+nnoremap <silent> <Left> :bprev<CR>
 
 inoremap jj <esc>
 cnoremap jj <esc>
