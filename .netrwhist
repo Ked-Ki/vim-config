@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/'
 let g:netrw_dirhist_2='/home'
 let g:netrw_dirhist_3='/home/kevin'
+let g:netrw_dirhist_4='/Users/kevin/.vim'
+let g:netrw_dirhist_5='/Users/kevin/cleversafe/core_workspace/dsnet-core/packages/dsnet-accesser/log'
+let g:netrw_dirhist_6='/Users/kevin/scripts'
