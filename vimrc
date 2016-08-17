@@ -79,7 +79,6 @@ nnoremap <Leader>g :e#<CR>
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.png,.jpg
 
 au BufRead,BufNewFile *.maude set filetype=maude
-au! Syntax maude source maude.vim
 
 filetype plugin on
 helptags $HOME/.vim/doc/
