@@ -8,11 +8,11 @@ set textwidth=80
 
 " tabs and indenting
 set autoindent  "indent new lines
-set tabstop=4 "number of visual spaces per tab
-set softtabstop=4  "How much space Vim gives to a tab while editing
+set tabstop=2 "number of visual spaces per tab
+set softtabstop=2  "How much space Vim gives to a tab while editing
 set expandtab "Makes tabs into spaces
 set smarttab  "Improves tabbing
-set shiftwidth=4  "Assists code formatting
+set shiftwidth=2  "Assists code formatting
 
 " ui changes
 "set cursorline
@@ -48,8 +48,8 @@ let g:tex_flavor = "latex"
 set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME
 let g:Tex_DefaultTargetFormat = "pdf"
 let g:Tex_MultipleCompileFormats='dvi,pdf'
-let g:Tex_ViewRule_pdf = "mupdf"
-let g:Tex_PromptedEnvironments='problem,proof,subproblem,enumerate,itemize,description,equation*,align*,lstlisting'
+let g:Tex_ViewRule_pdf = "xdg-open"
+let g:Tex_PromptedEnvironments='problem,proof,subproblem,enumerate,itemize,equation*,align*,lstlisting,subtheorem,noanswer,answer'
 let g:Tex_IgnoredWarnings =
             \'Underfull'."\n".
             \'Overfull'."\n".
@@ -72,3 +72,11 @@ function! AppendModeline()
   call append(line("$"), l:modeline)
 endfunction
 nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
+
+" buffer switching
+nnoremap <Leader>g :e#<CR>
+
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.png,.jpg
+
+au BufRead,BufNewFile *.maude set filetype=maude
+au! Syntax maude source maude.vim
