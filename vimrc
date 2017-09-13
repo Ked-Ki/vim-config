@@ -26,6 +26,8 @@ set backspace=indent,eol,start
 " fuck normal arrow keys
 nnoremap <silent> <Right> :bnext<CR>
 nnoremap <silent> <Left> :bprev<CR>
+nnoremap <silent> <Up> gt
+nnoremap <silent> <Down> gT
 
 inoremap jj <esc>
 cnoremap jj <esc>
@@ -82,3 +84,8 @@ au BufRead,BufNewFile *.maude set filetype=maude
 
 filetype plugin on
 helptags $HOME/.vim/doc/
+if has("gui_running")
+  set hlsearch
+  colorscheme slate
+  set ruler
+endif
