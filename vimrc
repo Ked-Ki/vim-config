@@ -84,8 +84,19 @@ au BufRead,BufNewFile *.maude set filetype=maude
 
 filetype plugin on
 helptags $HOME/.vim/doc/
+
+" gvim only settings
 if has("gui_running")
   set hlsearch
   colorscheme slate
   set ruler
 endif
+
+" stuff just for mac
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin"
+    set clipboard=unnamed
+  endif
+endif
+
