@@ -2,11 +2,11 @@
 §  User Macros
 § =============================================================
 
-SetMacro( 'AUTHOR',      'Kevin Freese' )
+SetMacro( 'AUTHOR',      'Kelsey Freese' )
 SetMacro( 'AUTHORREF',   '' )
 SetMacro( 'COMPANY',     '' )
 SetMacro( 'COPYRIGHT',   '' )
-SetMacro( 'EMAIL',       'Kevin.Freese1@ibm.com' )
+SetMacro( 'EMAIL',       'kmfreese@ibm.com' )
 SetMacro( 'LICENSE',     '' )
 SetMacro( 'ORGANIZATION','IBM Cloud Object Storage' )
 

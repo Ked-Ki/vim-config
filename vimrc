@@ -23,11 +23,14 @@ set lazyredraw "don't redraw during macros
 " normal backspace
 set backspace=indent,eol,start
 
+" mouse
+set mouse=a
+
 " fuck normal arrow keys
-nnoremap <silent> <Right> :bnext<CR>
-nnoremap <silent> <Left> :bprev<CR>
-nnoremap <silent> <Up> gt
-nnoremap <silent> <Down> gT
+nnoremap <silent> <Right> zL
+nnoremap <silent> <Left> zH
+nnoremap <silent> <Up> :bn<cr>
+nnoremap <silent> <Down> :bp<cr>
 
 inoremap jj <esc>
 cnoremap jj <esc>
