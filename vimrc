@@ -1,10 +1,11 @@
-set nocompatible
+set nocompatible 
+
+filetype plugin indent on "needed for vim-addon-manager
 
 syntax on  "syntax highlighting
 set relativenumber  "Enables line numbering
 
-set wrap
-set textwidth=80
+set textwidth=100
 
 " tabs and indenting
 set autoindent  "indent new lines
@@ -15,9 +16,11 @@ set smarttab  "Improves tabbing
 set shiftwidth=2  "Assists code formatting
 
 " ui changes
+set ruler
+
 "set cursorline
 set wildmenu
-set lazyredraw "don't redraw during macros
+set lazyredraw " don't redraw during macros
 
 " simple input changes
 " normal backspace
@@ -25,6 +28,15 @@ set backspace=indent,eol,start
 
 " mouse
 set mouse=a
+
+" search
+set hlsearch
+set ignorecase
+set smartcase
+
+" splits
+set splitbelow
+set splitright
 
 " fuck normal arrow keys
 nnoremap <silent> <Right> zL
@@ -38,62 +50,32 @@ vnoremap v <esc>
 
 nnoremap <Space> @q
 
+nnoremap <silent> <Leader>S :set wrap!<CR>
+
+nnoremap <leader>p :set invpaste<CR>
+
 " Allow sudo saving without restarting vim
 cmap w!! w !sudo tee > /dev/null %
-
-" SML make code {{{
-autocmd FileType sml setlocal makeprg=rlwrap\ sml\ '%'
-autocmd FileType sml setlocal commentstring=(*\ %s\ *)
-" }}}
-
-" vim-latexsuite stuff {{{
-filetype plugin indent on
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
-set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME
-let g:Tex_DefaultTargetFormat = "pdf"
-let g:Tex_MultipleCompileFormats='dvi,pdf'
-let g:Tex_ViewRule_pdf = "xdg-open"
-let g:Tex_PromptedEnvironments='problem,proof,subproblem,enumerate,itemize,equation*,align*,lstlisting,subtheorem,noanswer,answer'
-let g:Tex_IgnoredWarnings =
-            \'Underfull'."\n".
-            \'Overfull'."\n".
-            \'specifier changed to'."\n".
-            \'You have requested'."\n".
-            \'Missing number, treated as zero.'."\n".
-            \'There were undefined references'."\n".
-            \'LaTeX Font Warning:'."\n".
-            \'Citation %.%# undefined'
-let g:Tex_IgnoreLevel = 8
-" }}}
-
-" Append modeline after last line in buffer.
-" Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
-" files.
-function! AppendModeline()
-  let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d %set :",
-        \ &tabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
-  let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
-  call append(line("$"), l:modeline)
-endfunction
-nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 
 " buffer switching
 nnoremap <Leader>g :e#<CR>
 
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.png,.jpg
+" open vimrc
+command Vimrc e $MYVIMRC
+" open notes
+command LabNotes e ~/lab_notes.md
 
-au BufRead,BufNewFile *.maude set filetype=maude
+" follow markdown style web links
+nnoremap <leader>] yi(:!open <C-R>"<CR><CR>
+nnoremap <leader>} yi(:e <C-R>"<CR>
+
+" source addons config
+execute "source "."/".join(split($MYVIMRC, "/")[0:-2], "/")."/"."vim-addon-manager.vimrc"
+
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.png,.jpg
 
 filetype plugin on
 helptags $HOME/.vim/doc/
-
-" gvim only settings
-if has("gui_running")
-  set hlsearch
-  colorscheme slate
-  set ruler
-endif
 
 " stuff just for mac
 if has("unix")
@@ -102,4 +84,3 @@ if has("unix")
     set clipboard=unnamed
   endif
 endif
-
