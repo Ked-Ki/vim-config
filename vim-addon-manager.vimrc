@@ -25,3 +25,4 @@ call SetupVAM()
 " OPTION 1, use VAMActivate
 VAMActivate Tabular 
 VAMActivate github:plasticboy/vim-markdown
+VAMActivate github:vim-airline/vim-airline
