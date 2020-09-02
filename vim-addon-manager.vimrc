@@ -26,3 +26,6 @@ call SetupVAM()
 VAMActivate Tabular 
 VAMActivate github:plasticboy/vim-markdown
 VAMActivate github:vim-airline/vim-airline
+VAMActivate github:vim-airline/vim-airline-themes
+VAMActivate github:neoclide/coc.nvim
+VAMActivate github:neovimhaskell/haskell-vim

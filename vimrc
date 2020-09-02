@@ -17,6 +17,7 @@ set shiftwidth=2  "Assists code formatting
 
 " ui changes
 set ruler
+set t_Co=256
 
 "set cursorline
 set wildmenu
@@ -71,6 +72,9 @@ nnoremap <leader>} yi(:e <C-R>"<CR>
 
 " source addons config
 execute "source "."/".join(split($MYVIMRC, "/")[0:-2], "/")."/"."vim-addon-manager.vimrc"
+execute "source "."/".join(split($MYVIMRC, "/")[0:-2], "/")."/"."coc.vimrc"
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'night_owl'
 
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.png,.jpg
 
