@@ -23,8 +23,6 @@ call SetupVAM()
 " ACTIVATING PLUGINS
 
 " OPTION 1, use VAMActivate
-VAMActivate Tabular 
-VAMActivate github:plasticboy/vim-markdown
 VAMActivate github:vim-airline/vim-airline
 VAMActivate github:vim-airline/vim-airline-themes
 VAMActivate github:neoclide/coc.nvim

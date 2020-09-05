@@ -70,6 +70,12 @@ command LabNotes e ~/lab_notes.md
 nnoremap <leader>] yi(:!open <C-R>"<CR><CR>
 nnoremap <leader>} yi(:e <C-R>"<CR>
 
+" netrw (file browsing)
+let g:netrw_liststyle = 3 " tree-style view
+let g:netrw_banner = 0 " no banner
+let g:netrw_browse_split = 4 " open file in previous window
+let g:netrw_winsize = 30
+
 " source addons config
 execute "source "."/".join(split($MYVIMRC, "/")[0:-2], "/")."/"."vim-addon-manager.vimrc"
 execute "source "."/".join(split($MYVIMRC, "/")[0:-2], "/")."/"."coc.vimrc"
