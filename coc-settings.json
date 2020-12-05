@@ -1,24 +1,21 @@
 {
   "languageserver": {
     "haskell": {
-      "command": "hie-wrapper",
+      "command": "haskell-language-server-wrapper",
       "args": [
         "--lsp"
       ],
       "rootPatterns": [
+        "*.cabal",
         "stack.yaml",
-        "cabal.config",
-        "package.yaml"
+        "cabal.project",
+        "package.yaml",
+        "hie.yaml"
       ],
       "filetypes": [
         "haskell",
         "lhaskell"
-      ],
-      "initializationOptions": {
-        "languageServerHaskell": {
-          "hlintOn": true
-        }
-      }
+      ]
     }
   },
   "coc.preferences.formatOnSaveFiletypes": [
