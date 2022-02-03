@@ -42,6 +42,8 @@ set splitright
 " fuck normal arrow keys
 nnoremap <silent> <Right> zL
 nnoremap <silent> <Left> zH
+nnoremap <silent> S-<Right> 10zl
+nnoremap <silent> S-<Left> 10zh
 nnoremap <silent> <Up> :bn<cr>
 nnoremap <silent> <Down> :bp<cr>
 

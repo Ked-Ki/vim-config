@@ -19,7 +19,6 @@
     }
   },
   "coc.preferences.formatOnSaveFiletypes": [
-    "json",
     "markdown"
   ]
 }
