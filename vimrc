@@ -51,8 +51,6 @@ inoremap jj <esc>
 cnoremap jj <esc>
 vnoremap v <esc>
 
-nnoremap <Space> @q
-
 nnoremap <silent> <Leader>S :set wrap!<CR>
 
 nnoremap <leader>p :set invpaste<CR>
